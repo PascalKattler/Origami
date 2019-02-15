@@ -55,9 +55,9 @@
   in this package.[133X
   
   [33X[0;0YThis  software package is part of the project I.8 'Algorithmic approaches to
-  Teichmüller  curves'  (AG  Weitze, Saarland University) supported by Project
-  I.8  of SFB-TRR 195 'Symbolic Tools in Mathematics and their Application' of
-  the German Research Foundation (DFG).[133X
+  Teichmüller  curves'  (AG  Weitze, Saarland University) supported by SFB-TRR
+  195  'Symbolic  Tools  in  Mathematics  and their Application' of the German
+  Research Foundation (DFG).[133X
   
   
   -------------------------------------------------------
@@ -71,8 +71,8 @@
   2 [33X[0;0YThe functionality of this package[133X
     2.1 [33X[0;0YThe Origami Object[133X
       2.1-1 Origami
-    2.2 [33X[0;0YSL_2(Z)-Action on Origamis[133X
-      2.2-1 ActionOfSpecialLinearGroup
+    2.2 [33X[0;0Y[22XSL_2(Z)[122X-Action on Origamis[133X
+      2.2-1 [33X[0;0YActions[133X
     2.3 [33X[0;0YVeech groups[133X
       2.3-1 VeechGroup
     2.4 [33X[0;0YLists of Origamis[133X

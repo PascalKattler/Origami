@@ -5,8 +5,8 @@
   [1X2.1 [33X[0;0YThe Origami Object[133X[101X
   
   [33X[0;0YIn  this  section  we  introduce a new type called 'origami', namely origami
-  objects,  which  are  created  by  this  two  permutations. The degree of an
-  origami is the number of squares. Origamis are stored as such objects.[133X
+  objects,  which are created by two permutations. The degree of an origami is
+  the number of squares. Origamis are stored as such objects.[133X
   
   [1X2.1-1 Origami[101X
   
@@ -101,13 +101,14 @@
   [4X[32X[104X
   
   
-  [1X2.2 [33X[0;0YSL_2(Z)-Action on Origamis[133X[101X
+  [1X2.2 [33X[0;0Y[22XSL_2(Z)[122X[101X[1X-Action on Origamis[133X[101X
   
   [33X[0;0YThe group [22XSL_2(Z)[122X acts on the set of origamis of fixed degree. The following
   methods  help  calculating this operation both for matrices and words in the
   free group [22XF[122X.[133X
   
-  [1X2.2-1 ActionOfSpecialLinearGroup[101X
+  
+  [1X2.2-1 [33X[0;0YActions[133X[101X
   
   [33X[1;0Y[29X[2XActionOfSpecialLinearGroup[102X( [3Xword[103X, [3Xorigami[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10YAn Origami object.[133X
@@ -121,9 +122,8 @@
     [4X[28XOrigami((1,3)(2,5,4), (2,4,5,3), 5)[128X[104X
   [4X[32X[104X
   
-  [6XReturns:[106X  [33X[0;10YAn Origami.[133X
-  
   [33X[1;0Y[29X[2XActionOfSpecialLinearGroup[102X( [3Xmatrix[103X, [3Xorigami[103X ) [32X method[133X
+  [6XReturns:[106X  [33X[0;10YAn Origami.[133X
   
   [33X[0;0YGiven matrix in [22XSL_2(Z)[122X this function returns [3Xmatrix[103X.[3Xorigami[103X.[133X
   
@@ -203,9 +203,8 @@
     [4X[28X[ <identity ...>, S, T, T^-1, S*T, S*T^-1, T*S, T^-1*S, S*T*S, S*T^-1*S ][128X[104X
   [4X[32X[104X
   
-  [6XReturns:[106X  [33X[0;10YA boolean.[133X
-  
   [33X[1;0Y[29X[2XEquivalentOrigami[102X( [3Xorigami1[103X, [3Xorigami2[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YA boolean.[133X
   
   [33X[0;0YThis  function tests whether [3Xorigami1[103X is equal to [3Xorigami2[103X up to renumbering
   of the squares.[133X
@@ -220,8 +219,8 @@
     [4X[28Xfalse[128X[104X
   [4X[32X[104X
   
-  [33X[0;0YAt  this  point  we thank Thomas Breuer for the idea to implement the latter
-  function.[133X
+  [33X[0;0YAt  this  point  we  thank  Thomas  Breuer for the idea how to implement the
+  latter function.[133X
   
   
   [1X2.4 [33X[0;0YLists of Origamis[133X[101X

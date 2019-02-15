@@ -6,7 +6,8 @@
   in scr H(2)[117X, [18XIsrael J. Math.[118X, [19X151[119X (2006), 281--321.
   
   [[20XMcK[120X]  [16XMcKay,  B.[116X, [17XThe Simultaneous Conjugacy Problem in the symmetric group
-  S\_N[117X.
+  S\_N[117X,
+  \url{https://mathoverflow.net/questions/162428/the-simultaneous-conjugacy-problem-in-the-symmetric-group-s-n/2}.
   
   [[20XRan17[120X]    [16XRandecker,    A.[116X,    [17XSkript    zur    Vortragsreihe    Unendliche
   Translationsfl\"achen[117X (2017).
