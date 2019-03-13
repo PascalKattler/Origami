@@ -1,11 +1,125 @@
-<!DOCTYPE html>
-<html lang="en">
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-	<meta charset="UTF-8" />
-	<title>Placeholder</title>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<title>GAP (Origami Package) - Contents</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="GAPDoc2HTML" />
+<link rel="stylesheet" type="text/css" href="manual.css" />
+<script src="manual.js" type="text/javascript"></script>
+<script type="text/javascript">overwriteStyle();</script>
 </head>
-<body>
-<h1>Placeholder!</h1>
-<a href="..">Back</a>
+<body class="chap0"  onload="jscontent()">
+
+
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chapBib_mj.html">Bib</a>  <a href="chapInd_mj.html">Ind</a>  </div>
+
+<div class="chlinkprevnexttop">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1_mj.html">[Next Chapter]</a>&nbsp;  </div>
+
+<p id="mathjaxlink" class="pcenter"><a href="chap0.html">[MathJax off]</a></p>
+<p><a id="X7D2C85EC87DD46E5" name="X7D2C85EC87DD46E5"></a></p>
+<div class="pcenter">
+
+<h1>The <strong class="pkg">Origami</strong> Package</h1>
+
+
+<h2>Computing Veechgroups of Origamis</h2>
+
+<p>Version 1.0.0</p>
+
+<p>13.11.2018</p>
+
+</div>
+<p><b>Pascal Kattler
+    
+    
+    
+
+  </b>
+<br />Email: <span class="URL"><a href="mailto:kattler@math.uni-sb.de">kattler@math.uni-sb.de</a></span>
+<br />Homepage: <span class="URL"><a href="http://www.math.uni-sb.de/ag/weitze/">http://www.math.uni-sb.de/ag/weitze/</a></span>
+<br />Address: <br />AG Weitze-Schmithüsen<br /> FR 6.1 Mathematik<br /> Universität des Saarlandes<br /> D-66041 Saarbrücken<br />
+</p><p><b>Andrea Thevis
+    
+    
+    
+  </b>
+<br />Email: <span class="URL"><a href="mailto:thevis@math.uni-sb.de">thevis@math.uni-sb.de</a></span>
+<br />Homepage: <span class="URL"><a href="http://www.math.uni-sb.de/ag/weitze/">http://www.math.uni-sb.de/ag/weitze/</a></span>
+<br />Address: <br />AG Weitze-Schmithüsen<br /> FR 6.1 Mathematik<br /> Universität des Saarlandes<br /> D-66041 Saarbrücken<br />
+</p>
+
+<p><a id="X81488B807F2A1CF1" name="X81488B807F2A1CF1"></a></p>
+<h3>Copyright</h3>
+<p>© 2018 by Pascal Kattler</p>
+
+<p><a id="X82A988D47DFAFCFA" name="X82A988D47DFAFCFA"></a></p>
+<h3>Acknowledgements</h3>
+<p>We thank Sergio Siccha for his support and valuable input at the beginning of this project. Further, we would like to thank Vincent Delecroix and Samuel Lelièvre for fruitful discussions about algorithms implemented in the surface_dynamics package in sage. Some of the functionality of the surface_dynamics package can be used in this package as well. For this we use an interface between <strong class="pkg">GAP</strong> and sage. We are thankful to Mohamed Barakat and Markus Pfeiffer for helping using the interfaces. Moreover, we thank Thomas Breuer for helpful ideas and comments on some algorithms implemented in this package.</p>
+
+<p>This software package is part of the project I.8 'Algorithmic approaches to Teichmüller curves' (AG Weitze, Saarland University) supported by SFB-TRR 195 'Symbolic Tools in Mathematics and their Application' of the German Research Foundation (DFG).</p>
+
+<p><a id="X8537FEB07AF2BEC8" name="X8537FEB07AF2BEC8"></a></p>
+
+<div class="contents">
+<h3>Contents<a id="contents" name="contents"></a></h3>
+
+<div class="ContChap"><a href="chap1_mj.html#X7DFB63A97E67C0A1">1 <span class="Heading"> Introduction </span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap1_mj.html#X8389AD927B74BA4A">1.1 <span class="Heading">Overview</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap1_mj.html#X7B7606D880015BB8">1.2 <span class="Heading"> Notations </span></a>
+</span>
+</div>
+</div>
+<div class="ContChap"><a href="chap2_mj.html#X86FF9741842D9DD2">2 <span class="Heading"> The functionality of this package </span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2_mj.html#X820B5C567EB3242E">2.1 <span class="Heading">The Origami Object</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X80F0ED3B78404E71">2.1-1 Origami</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2_mj.html#X7AEF154284BF9A5E">2.2 <span class="Heading"><span class="SimpleMath">\(SL_2(\mathbb{Z})\)</span>-Action on Origamis</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X833C5DA683E4EA15">2.2-1 <span class="Heading"> Actions </span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2_mj.html#X864ABDEA7A7C66E7">2.3 <span class="Heading">Veech groups</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X795A3DA885181444">2.3-1 VeechGroup</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2_mj.html#X87416CDE7F6C0F9B">2.4 <span class="Heading">Lists of Origamis</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7CED322D7B64C6C3">2.4-1 OrigamiList</a></span>
+</div></div>
+</div>
+<div class="ContChap"><a href="chap3_mj.html#X8579A06A87552B5C">3 <span class="Heading"> SageMath functions </span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3_mj.html#X868D83F186ECD853">3.1 <span class="Heading"> Using SageMath functions</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X879251A57F7D2573">3.1-1 <span class="Heading"> SageMath </span></a>
+</span>
+</div></div>
+</div>
+<div class="ContChap"><a href="chapBib_mj.html"><span class="Heading">References</span></a></div>
+<div class="ContChap"><a href="chapInd_mj.html"><span class="Heading">Index</span></a></div>
+<br />
+</div>
+
+<div class="chlinkprevnextbot">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1_mj.html">[Next Chapter]</a>&nbsp;  </div>
+
+
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chapBib_mj.html">Bib</a>  <a href="chapInd_mj.html">Ind</a>  </div>
+
+<hr />
+<p class="foot">generated by <a href="http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>
 </body>
 </html>

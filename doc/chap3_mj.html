@@ -5,6 +5,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 <title>GAP (Origami Package) - Chapter 3:  SageMath functions </title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <meta name="generator" content="GAPDoc2HTML" />
@@ -15,17 +18,17 @@
 <body class="chap3"  onload="jscontent()">
 
 
-<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chapBib_mj.html">Bib</a>  <a href="chapInd_mj.html">Ind</a>  </div>
 
-<div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap2.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib.html">[Next Chapter]</a>&nbsp;  </div>
+<div class="chlinkprevnexttop">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap2_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib_mj.html">[Next Chapter]</a>&nbsp;  </div>
 
-<p id="mathjaxlink" class="pcenter"><a href="chap3_mj.html">[MathJax on]</a></p>
+<p id="mathjaxlink" class="pcenter"><a href="chap3.html">[MathJax off]</a></p>
 <p><a id="X8579A06A87552B5C" name="X8579A06A87552B5C"></a></p>
-<div class="ChapSects"><a href="chap3.html#X8579A06A87552B5C">3 <span class="Heading"> SageMath functions </span></a>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3.html#X868D83F186ECD853">3.1 <span class="Heading"> Using SageMath functions</span></a>
+<div class="ChapSects"><a href="chap3_mj.html#X8579A06A87552B5C">3 <span class="Heading"> SageMath functions </span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3_mj.html#X868D83F186ECD853">3.1 <span class="Heading"> Using SageMath functions</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X879251A57F7D2573">3.1-1 <span class="Heading"> SageMath </span></a>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X879251A57F7D2573">3.1-1 <span class="Heading"> SageMath </span></a>
 </span>
 </div></div>
 </div>
@@ -36,7 +39,7 @@
 
 <h4>3.1 <span class="Heading"> Using SageMath functions</span></h4>
 
-<p>The SageMath Package surface_dynamics from Vincent Delecroix <a href="chapBib.html#biBDelecroix">[VDCF]</a> provides functions to study origamis. To use the functions of this chapter, Sage and the surface_dynamics package must be installed on your operation system. Furthermore, the <strong class="pkg">GAP</strong> packages <strong class="pkg">homalgto</strong>, <strong class="pkg">io_forhomalg</strong>, <strong class="pkg">io</strong> and <strong class="pkg">rings</strong> must be installed. <br /> The following descriptions and examples are mainly taken from the manual of <a href="chapBib.html#biBDelecroix">[VDCF]</a>. <br /></p>
+<p>The SageMath Package surface_dynamics from Vincent Delecroix <a href="chapBib_mj.html#biBDelecroix">[VDCF]</a> provides functions to study origamis. To use the functions of this chapter, Sage and the surface_dynamics package must be installed on your operation system. Furthermore, the <strong class="pkg">GAP</strong> packages <strong class="pkg">homalgto</strong>, <strong class="pkg">io_forhomalg</strong>, <strong class="pkg">io</strong> and <strong class="pkg">rings</strong> must be installed. <br /> The following descriptions and examples are mainly taken from the manual of <a href="chapBib_mj.html#biBDelecroix">[VDCF]</a>. <br /></p>
 
 <p><a id="X879251A57F7D2573" name="X879251A57F7D2573"></a></p>
 
@@ -45,7 +48,7 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; VeechgroupBySage</code>( <var class="Arg">origami</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: A ModularSubGroup.</p>
 
-<p>This function executes the SageMath method veech_group to <var class="Arg">origami</var> and returns its result as <strong class="pkg">GAP</strong> object. It does the same as <code class="func">VeechGroup</code> (<a href="chap2.html#X795A3DA885181444"><span class="RefLink">2.3-1</span></a>).</p>
+<p>This function executes the SageMath method veech_group to <var class="Arg">origami</var> and returns its result as <strong class="pkg">GAP</strong> object. It does the same as <code class="func">VeechGroup</code> (<a href="chap2_mj.html#X795A3DA885181444"><span class="RefLink">2.3-1</span></a>).</p>
 
 
 <div class="example"><pre>
@@ -57,7 +60,7 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; NormalFormBySage</code>( <var class="Arg">origami</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: An Origami.</p>
 
-<p>This function executes the SageMath method to_standard_form to <var class="Arg">origami</var> and returns its result as <strong class="pkg">GAP</strong> object. In principle, it calculates a canonical representative by changing the numbering of the squares like the function <code class="func">OrigamiNormalForm</code> (<a href="chap2.html#X80F0ED3B78404E71"><span class="RefLink">2.1-1</span></a>). But it chooses another representation.</p>
+<p>This function executes the SageMath method to_standard_form to <var class="Arg">origami</var> and returns its result as <strong class="pkg">GAP</strong> object. In principle, it calculates a canonical representative by changing the numbering of the squares like the function <code class="func">OrigamiNormalForm</code> (<a href="chap2_mj.html#X80F0ED3B78404E71"><span class="RefLink">2.1-1</span></a>). But it chooses another representation.</p>
 
 
 <div class="example"><pre>
@@ -92,7 +95,7 @@ false
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ReduceBySage</code>( <var class="Arg">origami</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: An Origami.</p>
 
-<p>This function executes the SageMath method Reduce to <var class="Arg">origami</var> and returns its result as <strong class="pkg">GAP</strong> object. It returns a reduced origami isomorphic (up to <span class="SimpleMath">SL(2,Q)</span> action) to that origami.</p>
+<p>This function executes the SageMath method Reduce to <var class="Arg">origami</var> and returns its result as <strong class="pkg">GAP</strong> object. It returns a reduced origami isomorphic (up to <span class="SimpleMath">\(SL(2,\mathbb{Q})\)</span> action) to that origami.</p>
 
 
 <div class="example"><pre>
@@ -103,7 +106,7 @@ Origami((1,2), (1,3), 6)
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AbsolutePeriodGeneratorsBySage</code>( <var class="Arg">origami</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: A list of lists of Ints.</p>
 
-<p>This function executes the SageMath method AbsolutePeriodGenerators to <var class="Arg">origami</var> and returns its result as <strong class="pkg">GAP</strong> object. It return a generating set of the absolute periods of this origami. To each curve on an origami, we can associate its holonomy (that is an element of <span class="SimpleMath">Z × Z</span>). This function returns a generating set of the module generated by holonomies of closed curves.</p>
+<p>This function executes the SageMath method AbsolutePeriodGenerators to <var class="Arg">origami</var> and returns its result as <strong class="pkg">GAP</strong> object. It return a generating set of the absolute periods of this origami. To each curve on an origami, we can associate its holonomy (that is an element of <span class="SimpleMath">\( \mathbb{Z} \times \mathbb{Z}\)</span>). This function returns a generating set of the module generated by holonomies of closed curves.</p>
 
 
 <div class="example"><pre>
@@ -114,7 +117,7 @@ Origami((1,2), (1,3), 6)
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LatticeOfAbsolutePeriodsBySage</code>( <var class="Arg">origami</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: A list of lists of Ints.</p>
 
-<p>This function executes the SageMath method LatticeOfAbsolutePeriods to <var class="Arg">origami</var> and returns its result as <strong class="pkg">GAP</strong> object. It returns (a,t,u) where ((a,0),(t,u)) is a standard basis for the lattice of the absolute periods of self. The lattice of periods of an origami is the sublattice of <span class="SimpleMath">Z^2</span> generated by the holonomy vectors of its saddle connections. Any sublattice of <span class="SimpleMath">Z^2</span> has a standard basis consisting of a horizontal vector (a,0) and a nonhorizontal vector (t,u), where a, t, u are integers satisfying 0 &lt; t &lt; a and 0 &lt; t.</p>
+<p>This function executes the SageMath method LatticeOfAbsolutePeriods to <var class="Arg">origami</var> and returns its result as <strong class="pkg">GAP</strong> object. It returns (a,t,u) where ((a,0),(t,u)) is a standard basis for the lattice of the absolute periods of self. The lattice of periods of an origami is the sublattice of <span class="SimpleMath">\( \mathbb{Z}^2\)</span> generated by the holonomy vectors of its saddle connections. Any sublattice of <span class="SimpleMath">\( \mathbb{Z}^2\)</span> has a standard basis consisting of a horizontal vector (a,0) and a nonhorizontal vector (t,u), where a, t, u are integers satisfying 0 &lt; t &lt; a and 0 &lt; t.</p>
 
 
 <div class="example"><pre>
@@ -125,7 +128,7 @@ Origami((1,2), (1,3), 6)
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OptimalDegreeBySage</code>( <var class="Arg">origami</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: An Int.</p>
 
-<p>This function executes the SageMath method OptimalDegree to <var class="Arg">origami</var> and returns its result as <strong class="pkg">GAP</strong> object. The optimal degree of self is the degree of the map to the largest torus. Any origami <span class="SimpleMath">X → T</span> factor as <span class="SimpleMath">i ∘ π_opt</span> where i is an isogeny. The optimal degree is the degree of <span class="SimpleMath">π_opt</span>.</p>
+<p>This function executes the SageMath method OptimalDegree to <var class="Arg">origami</var> and returns its result as <strong class="pkg">GAP</strong> object. The optimal degree of self is the degree of the map to the largest torus. Any origami <span class="SimpleMath">\(X \rightarrow T\)</span> factor as <span class="SimpleMath">\(i \circ \pi_{opt}\)</span> where i is an isogeny. The optimal degree is the degree of <span class="SimpleMath">\(\pi_{opt}\)</span>.</p>
 
 
 <div class="example"><pre>
@@ -167,10 +170,10 @@ Origami((1,2), (1,3), 6)
 </pre></div>
 
 
-<div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap2.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib.html">[Next Chapter]</a>&nbsp;  </div>
+<div class="chlinkprevnextbot">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap2_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib_mj.html">[Next Chapter]</a>&nbsp;  </div>
 
 
-<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chapBib_mj.html">Bib</a>  <a href="chapInd_mj.html">Ind</a>  </div>
 
 <hr />
 <p class="foot">generated by <a href="http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>

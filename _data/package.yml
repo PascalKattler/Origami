@@ -1,6 +1,6 @@
 name: Origami
 version: 1.0.0
-date: 2018-11-19
+date: 2019-03-13
 description: |
     Computing Veechgroups of origamis
 
@@ -48,21 +48,21 @@ github: https://github.com/PascalKattler/Origami
 downloads:
     - name: .tar.gz
       url: https://github.com/PascalKattler/Origami/releases/download/v1.0.0/Origami-1.0.0.tar.gz
-    - name: .tar.bz2
-      url: https://github.com/PascalKattler/Origami/releases/download/v1.0.0/Origami-1.0.0.tar.bz2
+    - name: .zip
+      url: https://github.com/PascalKattler/Origami/releases/download/v1.0.0/Origami-1.0.0.zip
 
 abstract: |
-    This package calculates with origamis, a square tiled surface.
+    <span class="pkgname">Origami</span> Origami is a package for computing the Veech group of square-tiled surfaces which are also known as origamis.
 
 status: dev
 doc-html: doc/chap0.html
 doc-pdf: doc/manual.pdf
 citeas: |
     <p class='BibEntry'>
-    [<span class='BibKey'>KT18</span>]   <b class='BibAuthor'>Kattler, P. and Thevis, A.</b>,
+    [<span class='BibKey'>KT19</span>]   <b class='BibAuthor'>Kattler, P. and Thevis, A.</b>,
      <i class='BibTitle'>Origami, Computing Veechgroups of origamis,
              Version 1.0.0</i>
-     (<span class='BibYear'>2018</span>)<br />
+     (<span class='BibYear'>2019</span>)<br />
     (<span class='BibNote'>GAP package</span>),
     <span class='BibHowpublished'><a href="https://PascalKattler.github.io/Origami/">https://PascalKattler.github.io/Origami/</a></span>.
     </p>
@@ -73,12 +73,12 @@ bibtex: |
       author =           {Kattler, P. and Thevis, A.},
       title =            {{Origami},    Computing   Veechgroups   of   origamis,
                           {V}ersion 1.0.0},
-      month =            {Nov},
-      year =             {2018},
+      month =            {Mar},
+      year =             {2019},
       note =             {GAP package},
       howpublished =     {\href       {https://PascalKattler.github.io/Origami/}
                           {\texttt{https://PascalKattler.github.io/}\discretionary
                           {}{}{}\texttt{Origami/}}},
-      printedkey =       {KT18}
+      printedkey =       {KT19}
     }
 

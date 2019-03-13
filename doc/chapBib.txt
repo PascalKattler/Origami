@@ -3,7 +3,7 @@
   [1XReferences[101X
   
   [[20XHL06[120X]  [16XHubert,  P. and Leli\`evre, S.[116X, [17XPrime arithmetic Teichm\"uller discs
-  in scr H(2)[117X, [18XIsrael J. Math.[118X, [19X151[119X (2006), 281--321.
+  in mathcal H(2)[117X, [18XIsrael J. Math.[118X, [19X151[119X (2006), 281--321.
   
   [[20XMcK[120X]  [16XMcKay,  B.[116X, [17XThe Simultaneous Conjugacy Problem in the symmetric group
   S\_N[117X,
