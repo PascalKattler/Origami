@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>GAP (Origami) - Chapter 4: The Origami Database</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="GAPDoc2HTML" />
+<link rel="stylesheet" type="text/css" href="manual.css" />
+<script src="manual.js" type="text/javascript"></script>
+<script type="text/javascript">overwriteStyle();</script>
+</head>
+<body class="chap4"  onload="jscontent()">
+
+
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+
+<div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap3.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib.html">[Next Chapter]</a>&nbsp;  </div>
+
+<p id="mathjaxlink" class="pcenter"></p>
+<p><a id="X7878065584F2BDF5" name="X7878065584F2BDF5"></a></p>
+<div class="ChapSects"><a href="chap4.html#X7878065584F2BDF5">4 <span class="Heading">The Origami Database</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4.html#X7863467578DF5AFF">4.1 <span class="Heading">Setting up the database</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4.html#X80E761E27F525830">4.2 <span class="Heading">Using the origami database</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X7B8CDCFE7C11BD41">4.2-1 ConnectToOrigamiDB</a></span>
+</div></div>
+</div>
+
+<h3>4 <span class="Heading">The Origami Database</span></h3>
+
+<p><a id="X7863467578DF5AFF" name="X7863467578DF5AFF"></a></p>
+
+<h4>4.1 <span class="Heading">Setting up the database</span></h4>
+
+<p>To use the origami database, you need an instance of ArangoDB running on port 8529. After installing ArangoDB, you need to set up a database as follows:</p>
+
+
+<ul>
+<li><p>user: 'origami'</p>
+
+</li>
+<li><p>password: none</p>
+
+</li>
+<li><p>database: 'origami'</p>
+
+</li>
+</ul>
+<p>In this database, create three collections called <em>origami_representatives</em>, <em>origamis</em> and <em>veechgroups</em>. Please download the data from <span class="URL"><a href="https://www.math.uni-sb.de/ag/weitze/CMS/index.php/de/forschung">https://www.math.uni-sb.de/ag/weitze/CMS/index.php/de/forschung</a></span> and import the <em>json</em>-files into the corresponding collections. All of this can be done in the web interface of ArangoDB, which you can reach under <span class="URL"><a href="http://127.0.0.1:8529">http://127.0.0.1:8529</a></span>.</p>
+
+<p><a id="X80E761E27F525830" name="X80E761E27F525830"></a></p>
+
+<h4>4.2 <span class="Heading">Using the origami database</span></h4>
+
+<p><a id="X7B8CDCFE7C11BD41" name="X7B8CDCFE7C11BD41"></a></p>
+
+<h5>4.2-1 ConnectToOrigamiDB</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ConnectToOrigamiDB</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Returns: An <code class="code">ArangoDatabase</code> object</p>
+
+<p>Connects to the arango database 'origami' at the endpoint 'http+tcp://127.0.0.1:8529' with the user 'origami' and password 'secret'.</p>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InsertVeechGroupIntoDB</code>( <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: An <code class="code">ArangoDocument</code></p>
+
+<p>Takes a <code class="code">ModularSubgroup</code> <var class="Arg">G</var> and inserts it into the Veech group table. Only precomputed attributes are inserted. This function does not compute anything new from the group. No test is performed to check whether <var class="Arg">G</var> already exists in the database. The resulting <code class="code">ArangoDocument</code> corresponding to the new database entry is returned.</p>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GetVeechGroupDBEntry</code>( <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: An <code class="code">ArangoDocument</code></p>
+
+<p>Takes a <code class="code">ModularSubgroup</code> <var class="Arg">G</var> and returns the corresponding database entry or <code class="code">fail</code> if <var class="Arg">G</var> is not in the database.</p>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GetVeechGroupsFromDB</code>( <var class="Arg">constraints</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: A list of <code class="code">ModularSubgroup</code>s</p>
+
+<p>Returns all Veech groups in the database subject to the argument <var class="Arg">constraints</var> which is given in the form of a record.</p>
+
+
+<div class="example"><pre>
+      
+      gap&gt; GetVeechGroupsFromDB(rec(index := 30, genus := 0));
+      [list of modular subgroups]
+      gap&gt; GetVeechGroupsFromDB(rec(congruence := true, level := 12));
+      [list of modular subgroups]
+      gap&gt; GetVeechGroupsFromDB(rec(deficiency := 5));
+      [list of modular subgroups]
+      
+    </pre></div>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; UpdateVeechGroupDBEntry</code>( <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: An <code class="code">ArangoDocument</code></p>
+
+<p>Updates the Veech group entry in the database with newly computed data and returns the corresponding <code class="code">ArangoDocument</code>.</p>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RemoveVeechGroupFromDB</code>( <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: Nothing.</p>
+
+<p>Removes the Veech group <var class="Arg">G</var> from the database (if present). NOT YET IMPLEMENTED</p>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InsertOrigamiRepresentativeIntoDB</code>( <var class="Arg">O</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: An <code class="code">ArangoDocument</code></p>
+
+<p>Inserts the normal form of the origami <var class="Arg">O</var> into the origami representative list. Inserts only precomputed data. If the Veech group of <var class="Arg">O</var> does not already exist in the database, it is also inserted. This function assumes that no other element of the <span class="SimpleMath">SL_2(Z)</span> orbit of <var class="Arg">O</var> exists in the representative list, no test is performed to check this.</p>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GetOrigamiOrbitRepresentativeDBEntry</code>( <var class="Arg">O</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: An <code class="code">ArangoDocument</code></p>
+
+<p>Takes an Origami <var class="Arg">O</var> and returns the corresponding database entry or <code class="code">fail</code> if <var class="Arg">O</var> is not in the database.</p>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GetOrigamiOrbitRepresentativesFromDB</code>( <var class="Arg">constraints</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: A list of <code class="code">Origami</code>s</p>
+
+<p>Returns all origami orbit representatives in the database subject to the constraints given in the form of the record <var class="Arg">constraints</var>.</p>
+
+
+<div class="example"><pre>
+      
+      gap&gt; GetOrigamiOrbitRepresentativesFromDB(rec(stratum := [4]));
+      [ Origami((1,4,3)(2,5), (1,5,3,4)(2,6), 6) ]
+      gap&gt; GetOrigamiOrbitRepresentativesFromDB(rec(degree := 5));
+      [ Origami((1,3,5), (1,3)(2,4,5), 5) ]
+      
+    </pre></div>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GetAllOrigamiOrbitRepresentativesFromDB</code>(  )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: A list of <code class="code">Origami</code>s</p>
+
+<p>Returns all origami orbit representatives in the database. Shorthand for <code class="code">GetOrigamiOrbitRepresentativesFromDB(rec());</code></p>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; UpdateOrigamiOrbitRepresentativeDBEntry</code>( <var class="Arg">O</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: An <code class="code">ArangoDocument</code></p>
+
+<p>Updates the origami orbit representative entry in the database with newly computed data and returns the corresponding <code class="code">ArangoDocument</code>. If the origami orbit representative <var class="Arg">O</var> does not exist in the database, it is inserted.</p>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RemoveOrigamiOrbitRepresentativeFromDB</code>( <var class="Arg">O</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: Nothing.</p>
+
+<p>Removes the origami orbit representative <var class="Arg">O</var> from the database if present. NOT YET IMPLEMENTED!</p>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InsertOrigamiWithOrbitRepresentativeIntoDB</code>( <var class="Arg">O</var>, <var class="Arg">R</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: An <code class="code">ArangoDocument</code></p>
+
+<p>Inserts the origami <var class="Arg">O</var> into the origami list with orbit representative <var class="Arg">R</var> which is inserted into the origami orbit representative list if it is not already in there. Returns the <code class="code">ArangoDocument</code> corresponding to <var class="Arg">O</var>.</p>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InsertOrigamiIntoDB</code>( <var class="Arg">O</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: An <code class="code">ArangoDocument</code></p>
+
+<p>Inserts an origami <var class="Arg">O</var> into the database. If the Veech group and the orbit of <var class="Arg">O</var> is known, this function checks if there is already a representative of the orbit of <var class="Arg">O</var> in the database. If not, <var class="Arg">O</var> is inserted as the representative of its orbit, if yes, <var class="Arg">O</var> is only inserted into the origami list with a reference to the representative. If the Veech group of <var class="Arg">O</var> is not known, it is inserted as its own representative. This might result in entries in the origami orbit representative list which are in the same orbit.</p>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GetOrigamiDBEntry</code>( <var class="Arg">O</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: An <code class="code">ArangoDocument</code></p>
+
+<p>Returns the <code class="code">ArangoDocument</code> in the origami list corresponding to the origami <var class="Arg">O</var> or fail if does not exist in the database.</p>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GetOrigamiOrbit</code>( <var class="Arg">O</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: A list of <code class="code">Origami</code>s</p>
+
+<p>Returns all origamis in the database which are in the orbit of <var class="Arg">O</var>.</p>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; UpdateRepresentativeOfOrigami</code>( <var class="Arg">O</var>, <var class="Arg">R</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: Nothing.</p>
+
+<p>Updates the orbit representative of <var class="Arg">O</var> to be <var class="Arg">R</var>.</p>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RemoveOrigamiFromDB</code>( <var class="Arg">O</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: Nothing.</p>
+
+<p>Removes the origami <var class="Arg">O</var> from the database.</p>
+
+
+<div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap3.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib.html">[Next Chapter]</a>&nbsp;  </div>
+
+
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+
+<hr />
+<p class="foot">generated by <a href="http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>
+</body>
+</html>

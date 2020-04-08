@@ -1,161 +1,127 @@
   
-  [1X3 [33X[0;0YSageMath functions[133X[101X
+  [1X3 [33X[0;0YSageMath and the surface_dynamics package[133X[101X
+  
+  [33X[0;0YThe SageMath package [13Xsurface_dynamics[113X by Vincent Delecroix [VDCF] implements
+  functions  to  study  origamis  in Sage. We provide a small interface to use
+  these   methods  from  [5XGAP[105X.  An  installation  of  Sage  together  with  the
+  [13Xsurface_dynamics[113X  package and the [5XGAP[105X packages [5XHomalgToCAS[105X, [5XIO_ForHomalg[105X, [5XIO[105X
+  and [5XRingsForHomalg[105X are needed.[133X
   
   
-  [1X3.1 [33X[0;0YUsing SageMath functions[133X[101X
+  [1X3.1 [33X[0;0YSageMath functions[133X[101X
   
-  [33X[0;0YThe SageMath Package surface_dynamics from Vincent Delecroix [VDCF] provides
-  functions  to study origamis. To use the functions of this chapter, Sage and
-  the  surface_dynamics  package  must  be installed on your operation system.
-  Furthermore,  the  [5XGAP[105X packages [5Xhomalgto[105X, [5Xio_forhomalg[105X, [5Xio[105X and [5Xrings[105X must be
-  installed.[133X
   [33X[0;0YThe  following descriptions and examples are mainly taken from the manual of
   [VDCF].[133X
   
+  [1X3.1-1 VeechgroupBySage[101X
   
-  [1X3.1-1 [33X[0;0YSageMath[133X[101X
+  [33X[1;0Y[29X[2XVeechgroupBySage[102X( [3XO[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YA subgroup of [22XSL_2( Z)[122X.[133X
   
-  [33X[1;0Y[29X[2XVeechgroupBySage[102X( [3Xorigami[103X ) [32X function[133X
-  [6XReturns:[106X  [33X[0;10YA ModularSubGroup.[133X
+  [33X[0;0YThis  function  executes  the  SageMath  method  [10Xveech_group[110X and returns its
+  result as a [5XGAP[105X object.[133X
   
-  [33X[0;0YThis  function  executes  the  SageMath  method  veech_group  to [3Xorigami[103X and
-  returns its result as [5XGAP[105X object. It does the same as [2XVeechGroup[102X ([14X2.3-1[114X).[133X
-  
-  [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XVeechgroupBySage(Origami((1,3,5), (1,3)(2,4,5) ));[127X[104X
-    [4X[28X<modular subgroup of index 24>[128X[104X
-    [4X[28X[128X[104X
-  [4X[32X[104X
-  
-  [33X[1;0Y[29X[2XNormalFormBySage[102X( [3Xorigami[103X ) [32X function[133X
-  [6XReturns:[106X  [33X[0;10YAn Origami.[133X
-  
-  [33X[0;0YThis  function  executes the SageMath method to_standard_form to [3Xorigami[103X and
-  returns  its  result  as [5XGAP[105X object. In principle, it calculates a canonical
-  representative  by  changing  the numbering of the squares like the function
-  [2XOrigamiNormalForm[102X ([14X2.1-1[114X). But it chooses another representation.[133X
-  
-  [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XNormalFormBySage(Origami((1,3,5), (1,3)(2,4,5) ));[127X[104X
-    [4X[28XOrigami((3,4,5), (1,2,3)(4,5), 5)[128X[104X
-  [4X[32X[104X
-  
-  [33X[1;0Y[29X[2XIsHyperellipticBySage[102X( [3Xorigami[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XIsHyperellipticBySage[102X( [3XO[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10YA boolean.[133X
   
-  [33X[0;0YThis  function  executes  the SageMath method IsHyperelliptic to [3Xorigami[103X and
-  returns   its   result   as   [5XGAP[105X  object.  It  tests,  weather  [3Xorigami[103X  is
-  hyperelliptic.[133X
+  [33X[0;0YChecks whether or not the origami [3XO[103X is hyperelliptic.[133X
   
-  [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XIsHyperellipticBySage(Origami((1,3), (1,2) ));                                                                                           [127X[104X
-    [4X[28Xtrue[128X[104X
-  [4X[32X[104X
-  
-  [33X[1;0Y[29X[2XIsPrimitiveBySage[102X( [3Xorigami[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XIsPrimitiveBySage[102X( [3XO[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10YA boolean.[133X
   
-  [33X[0;0YThis  function  executes  the  SageMath  method  IsPrimitive  to [3Xorigami[103X and
-  returns  its  result  as  [5XGAP[105X object. An origami is primitive if it does not
-  cover  an  other  origami.  An  origami  is  primitive  if the action of the
-  monodromy group has no non trivial block.[133X
+  [33X[0;0YChecks  whether  or  not  the  origami  [3XO[103X is primitive. An origami is called
+  primitive,  if  it  does  not  cover another origami, or equivalently if the
+  action of the monodromy group has no non-trivial block.[133X
   
-  [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XIsPrimitiveBySage(Origami((1,3), (1,2) ));[127X[104X
-    [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27XIsPrimitiveBySage(Origami((1,2)(3,4), (1,3,5,6)(2,4) ));[127X[104X
-    [4X[28Xfalse[128X[104X
-  [4X[32X[104X
-  
-  [33X[1;0Y[29X[2XReduceBySage[102X( [3Xorigami[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XReduceBySage[102X( [3XO[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10YAn Origami.[133X
   
-  [33X[0;0YThis function executes the SageMath method Reduce to [3Xorigami[103X and returns its
-  result as [5XGAP[105X object. It returns a reduced origami isomorphic (up to [22XSL(2,Q)[122X
-  action) to that origami.[133X
+  [33X[0;0YReturns a reduced origami isomorphic (up to [22XSL(2,Q)[122X action) to [3XO[103X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XReduceBySage(Origami((1,2)(3,4), (1,3,5,6)(2,4) ));[127X[104X
-    [4X[28XOrigami((1,2), (1,3), 6)[128X[104X
+    [4X[28X      gap> ReduceBySage(Origami((1,2)(3,4), (1,3,5,6)(2,4) ));[128X[104X
+    [4X[28X      Origami((1,2), (1,3), 6)[128X[104X
+    [4X[28X    [128X[104X
   [4X[32X[104X
   
-  [33X[1;0Y[29X[2XAbsolutePeriodGeneratorsBySage[102X( [3Xorigami[103X ) [32X function[133X
-  [6XReturns:[106X  [33X[0;10YA list of lists of Ints.[133X
+  [33X[1;0Y[29X[2XAbsolutePeriodGeneratorsBySage[102X( [3XO[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YA list of lists of integers.[133X
   
-  [33X[0;0YThis  function  executes  the  SageMath  method  AbsolutePeriodGenerators to
-  [3Xorigami[103X  and returns its result as [5XGAP[105X object. It return a generating set of
-  the  absolute  periods  of this origami. To each curve on an origami, we can
-  associate  its holonomy (that is an element of [22XZ × Z[122X). This function returns
-  a generating set of the module generated by holonomies of closed curves.[133X
+  [33X[0;0YReturns  a  generating set of the absolute periods of [3XO[103X. To each curve on an
+  origami,  we  can associate its holonomy (that is an element of [22XZ × Z[122X). This
+  function  returns  a generating set of the module generated by holonomies of
+  closed curves.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XAbsolutePeriodGeneratorsBySage(Origami((1,2,3,4)(5,6), (1,5)(2,6) )); [127X[104X
-    [4X[28X[ [ 2, 0 ], [ 2, 0 ], [ 0, 1 ], [ 0, 1 ] ][128X[104X
+    [4X[28X      gap> AbsolutePeriodGeneratorsBySage(Origami((1,2,3,4)(5,6), (1,5)(2,6) ));[128X[104X
+    [4X[28X      [ [ 2, 0 ], [ 2, 0 ], [ 0, 1 ], [ 0, 1 ] ][128X[104X
+    [4X[28X    [128X[104X
   [4X[32X[104X
   
-  [33X[1;0Y[29X[2XLatticeOfAbsolutePeriodsBySage[102X( [3Xorigami[103X ) [32X function[133X
-  [6XReturns:[106X  [33X[0;10YA list of lists of Ints.[133X
+  [33X[1;0Y[29X[2XLatticeOfAbsolutePeriodsBySage[102X( [3XO[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YA list of lists of integers.[133X
   
-  [33X[0;0YThis  function  executes  the  SageMath  method  LatticeOfAbsolutePeriods to
-  [3Xorigami[103X  and  returns  its  result  as  [5XGAP[105X object. It returns (a,t,u) where
-  ((a,0),(t,u)) is a standard basis for the lattice of the absolute periods of
-  self.  The  lattice  of  periods  of  an  origami  is  the sublattice of [22XZ^2[122X
-  generated  by the holonomy vectors of its saddle connections. Any sublattice
-  of  [22XZ^2[122X  has  a standard basis consisting of a horizontal vector (a,0) and a
-  nonhorizontal  vector (t,u), where a, t, u are integers satisfying 0 < t < a
-  and 0 < t.[133X
+  [33X[0;0YReturns  [22X(a,t,u)[122X  where [22X((a,0),(t,u))[122X is a standard basis for the lattice of
+  the  absolute  periods  of  [3XO[103X.  The  lattice of periods of an origami is the
+  sublattice   of  [22XZ^2[122X  generated  by  the  holonomy  vectors  of  its  saddle
+  connections.  Any  sublattice  of  [22XZ^2[122X  has a standard basis consisting of a
+  horizontal  vector [22X(a,0)[122X and a nonhorizontal vector [22X(t,u)[122X, where [22Xa, t, u[122X are
+  integers satisfying [22X0 < t < a[122X and [22X0 < t[122X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XLatticeOfAbsolutePeriodsBySage(Origami((1,2)(3,4), (2,3) ));   [127X[104X
-    [4X[28X[ [ 2, 0 ], [ 0, 1 ] ][128X[104X
+    [4X[28X      gap> LatticeOfAbsolutePeriodsBySage(Origami((1,2)(3,4), (2,3) ));[128X[104X
+    [4X[28X      [ [ 2, 0 ], [ 0, 1 ] ][128X[104X
+    [4X[28X    [128X[104X
   [4X[32X[104X
   
-  [33X[1;0Y[29X[2XOptimalDegreeBySage[102X( [3Xorigami[103X ) [32X function[133X
-  [6XReturns:[106X  [33X[0;10YAn Int.[133X
+  [33X[1;0Y[29X[2XOptimalDegreeBySage[102X( [3XO[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YAn integer.[133X
   
-  [33X[0;0YThis  function  executes  the  SageMath  method OptimalDegree to [3Xorigami[103X and
-  returns  its  result as [5XGAP[105X object. The optimal degree of self is the degree
-  of the map to the largest torus. Any origami [22XX → T[122X factor as [22Xi ∘ π_opt[122X where
-  i is an isogeny. The optimal degree is the degree of [22Xπ_opt[122X.[133X
+  [33X[0;0YComputes  the  optimal  degree of [3XO[103X. The optimal degree of an origami is the
+  degree  of  the  map  to the largest torus. Any origami [22XX → T[122X factors as [22Xi ∘
+  π_opt[122X where i is an isogeny. The optimal degree is the degree of [22Xπ_opt[122X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XOptimalDegreeBySage(Origami((1,2)(3,4), (2,3) ));[127X[104X
-    [4X[28X2[128X[104X
+    [4X[28X      gap> OptimalDegreeBySage(Origami((1,2)(3,4), (2,3) ));[128X[104X
+    [4X[28X      2[128X[104X
+    [4X[28X    [128X[104X
   [4X[32X[104X
   
-  [33X[1;0Y[29X[2XPeriodGeneratorsBySage[102X( [3Xorigami[103X ) [32X function[133X
-  [6XReturns:[106X  [33X[0;10YA list of lists of Ints.[133X
+  [33X[1;0Y[29X[2XPeriodGeneratorsBySage[102X( [3XO[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YA list of lists of integer.[133X
   
-  [33X[0;0YThis  function  executes the SageMath method PeriodGenerators to [3Xorigami[103X and
-  returns  its result as [5XGAP[105X object. It return a list of periods that generate
-  the lattice of periods.[133X
+  [33X[0;0YReturn a list of periods that generate the lattice of periods.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XPeriodGeneratorsBySage(Origami((1,3,6)(2,5,7)(4),(1,2,4,3,5,6,7) ));    [127X[104X
-    [4X[28X[ [ 2, 0 ], [ 1, 0 ], [ 1, 0 ], [ 0, 2 ], [ -1, 2 ], [ 0, 1 ] ][128X[104X
+    [4X[28X      gap> PeriodGeneratorsBySage(Origami((1,3,6)(2,5,7)(4),(1,2,4,3,5,6,7) ));[128X[104X
+    [4X[28X      [ [ 2, 0 ], [ 1, 0 ], [ 1, 0 ], [ 0, 2 ], [ -1, 2 ], [ 0, 1 ] ][128X[104X
+    [4X[28X    [128X[104X
   [4X[32X[104X
   
-  [33X[1;0Y[29X[2XWidthsAndHeightsBySage[102X( [3Xorigami[103X ) [32X function[133X
-  [6XReturns:[106X  [33X[0;10YA list of lists of Ints.[133X
+  [33X[1;0Y[29X[2XWidthsAndHeightsBySage[102X( [3XO[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YA list of lists of integers.[133X
   
-  [33X[0;0YThis  function  executes the SageMath method WidthsAndHeights to [3Xorigami[103X and
-  returns  its  result as [5XGAP[105X object. It return the list of widths and heigths
-  of cylinder.[133X
+  [33X[0;0YReturn the list of widths and heigths of cylinders in [3XO[103X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XWidthsAndHeightsBySage(Origami((1,2)(3,4),(1,3,5,6)(2,4) ));        [127X[104X
-    [4X[28X[ [ 1, 2 ], [ 2, 2 ] ][128X[104X
+    [4X[28X      gap> WidthsAndHeightsBySage(Origami((1,2)(3,4),(1,3,5,6)(2,4) ));[128X[104X
+    [4X[28X      [ [ 1, 2 ], [ 2, 2 ] ][128X[104X
+    [4X[28X    [128X[104X
   [4X[32X[104X
   
-  [33X[1;0Y[29X[2XSumOfLyapunovExponentsBySage[102X( [3Xorigami[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XSumOfLyapunovExponentsBySage[102X( [3XO[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10YA rational number.[133X
   
-  [33X[0;0YThis function executes the SageMath method SumOfLyapunovExponents to [3Xorigami[103X
-  and  returns  its  result  as  [5XGAP[105X  object.  It  returns the sum of Lyapunov
-  exponents for this origami.[133X
+  [33X[0;0YCopmutes the sum of Lyapunov exponents for [3XO[103X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XSumOfLyapunovExponentsBySage(Origami((1,2)(3,4),(2,3) ));[127X[104X
-    [4X[28X3/2[128X[104X
+    [4X[28X      gap> SumOfLyapunovExponentsBySage(Origami((1,2)(3,4),(2,3) ));[128X[104X
+    [4X[28X      3/2[128X[104X
+    [4X[28X    [128X[104X
   [4X[32X[104X
+  
+  [33X[1;0Y[29X[2XIntermediateCoversBySage[102X( [3XO[103X ) [32X function[133X
+  
+  [33X[0;0YReturns   the   list  of  intermediate  covers  of  this  origami.  Not  yet
+  implemented.[133X
   

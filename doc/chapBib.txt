@@ -2,30 +2,20 @@
   
   [1XReferences[101X
   
-  [[20XHL06[120X]  [16XHubert,  P. and Leli\`evre, S.[116X, [17XPrime arithmetic Teichm\"uller discs
-  in mathcal H(2)[117X, [18XIsrael J. Math.[118X, [19X151[119X (2006), 281--321.
+  [[20XHL06[120X] [16XHubert, P. and Leli\`evre, S.[116X, [17XPrime arithmetic Teichm\"uller discs in mathcal H(2)[117X, [18XIsrael J. Math.[118X (2006).
   
-  [[20XMcK[120X]  [16XMcKay,  B.[116X, [17XThe Simultaneous Conjugacy Problem in the symmetric group
-  S\_N[117X,
-  \url{https://mathoverflow.net/questions/162428/the-simultaneous-conjugacy-problem-in-the-symmetric-group-s-n/2}.
+  [[20XRan17[120X] [16XRandecker, A.[116X, [17XSkript zur Vortragsreihe Unendliche Translationsfl\"achen[117X (2017).
   
-  [[20XRan17[120X]    [16XRandecker,    A.[116X,    [17XSkript    zur    Vortragsreihe    Unendliche
-  Translationsfl\"achen[117X (2017).
+  [[20XSch04[120X] [16XSchmith\"{u}sen, G.[116X, [17XAn algorithm for finding the Veech group of an origami[117X, [18XExperiment. Math.[118X (2004).
   
-  [[20XSch04[120X]  [16XSchmith\"{u}sen, G.[116X, [17XAn algorithm for finding the Veech group of an
-  origami[117X, [18XExperiment. Math.[118X, [19X13[119X, 4 (2004), 459--472.
+  [[20XSch05[120X] [16XSchmith\"{u}sen, G.[116X, [17XVeech Groups of Origamis[117X, Ph.D. thesis, University of Karlsruhe (2005).
   
-  [[20XSch05[120X]  [16XSchmith\"{u}sen,  G.[116X,  [17XVeech  Groups  of  Origamis[117X,  Ph.D.  thesis,
-  University Karlsruhe (2005).
+  [[20XVDCF[120X]      [16XVincent      Delecroix     Charles     Fougeron,     S.     L.[116X,     [17Xsurface\_dynamics     SageMath     package     version     0.4.0[117X,
+  \url{https://pypi.org/project/surface_dynamics/}.
   
-  [[20XVDCF[120X] [16XVincent Delecroix Charles Fougeron, S. L.[116X, [17Xsurface\_dynamics SageMath
-  package version 0.4.0[117X, \url{https://pypi.org/project/surface_dynamics/}.
+  [[20XZmi11[120X] [16XZmiaikou, D.[116X, [17XOrigamis and permutation groups[117X, Ph.D. thesis, University Paris-Sud (2011).
   
-  [[20XZmi11[120X]  [16XZmiaikou,  D.[116X,  [17XOrigamis  and  permutation  groups[117X,  Ph.D.  thesis,
-  University Paris-Sud (2011).
-  
-  [[20XZor06[120X]  [16XZorich,  A.[116X, [17XFlat surfaces[117X, in Frontiers in number theory, physics,
-  and geometry. I, Springer, Berlin (2006), 437--583.
+  [[20XZor06[120X] [16XZorich, A.[116X, [17XFlat surfaces[117X, in Frontiers in number theory, physics, and geometry. I, Springer, Berlin (2006).
   
   
   

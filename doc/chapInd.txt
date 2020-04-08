@@ -3,33 +3,71 @@
   [1XIndex[101X
   
   [2XAbsolutePeriodGeneratorsBySage[102X 3.1-1 
-  [2XActionOfF2ViaCanonical[102X 2.2-1 
-  [2XActionOfSpecialLinearGroup[102X 2.2-1  2.2-1 
-  [2XCosets[102X 2.3-1 
+  [2XActionOfS[102X 2.2-1 
+  [2XActionOfSInv[102X 2.2-1 
+  [2XActionOfSL2[102X 2.2-1 
+  [2XActionOfT[102X 2.2-1 
+  [2XActionOfTInv[102X 2.2-1 
+  [2XAllNormalOrigamisByDegree[102X 2.5-1 
+  [2XAllNormalOrigamisFromGroup[102X 2.5-1 
+  [2XAllOrigamisByDegree[102X 2.6-1 
+  [2XAllOrigamisInStratum[102X 2.6-1 
+  [2XAsPermutationRepresentation[102X 2.5-1 
+  [2XConnectToOrigamiDB[102X, ConnectToOrigamiDB 4.2-1 
+  [2XCopyOrigamiInNormalForm[102X 2.3-1 
+  [2XDeckGroup[102X 2.4-1 
   [2XDegreeOrigami[102X 2.1-1 
-  [2XEquivalentOrigami[102X 2.3-1 
-  [2XGenus[102X 2.1-1 
+  [2XElevatorOrigami[102X 2.6-1 
+  [2XGenus[102X 2.4-1 
+  [2XGetAllOrigamiOrbitRepresentativesFromDB[102X, GetAllOrigamiOrbitRepresentativesFromDB 4.2-1 
+  [2XGetOrigamiDBEntry[102X, GetOrigamiDBEntry 4.2-1 
+  [2XGetOrigamiOrbit[102X, GetOrigamiOrbit 4.2-1 
+  [2XGetOrigamiOrbitRepresentativeDBEntry[102X, GetOrigamiOrbitRepresentativeDBEntry 4.2-1 
+  [2XGetOrigamiOrbitRepresentativesFromDB[102X, GetOrigamiOrbitRepresentativesFromDB 4.2-1 
+  [2XGetVeechGroupDBEntry[102X, GetVeechGroupDBEntry 4.2-1 
+  [2XGetVeechGroupsFromDB[102X, GetVeechGroupsFromDB 4.2-1 
+  [2XHorizontalElement[102X 2.5-1 
   [2XHorizontalPerm[102X 2.1-1 
+  [2XIndexOfMonodromyGroup[102X 2.4-1 
+  [2XInsertOrigamiIntoDB[102X, InsertOrigamiIntoDB 4.2-1 
+  [2XInsertOrigamiRepresentativeIntoDB[102X, InsertOrigamiRepresentativeIntoDB 4.2-1 
+  [2XInsertOrigamiWithOrbitRepresentativeIntoDB[102X, InsertOrigamiWithOrbitRepresentativeIntoDB 4.2-1 
+  [2XInsertVeechGroupIntoDB[102X, InsertVeechGroupIntoDB 4.2-1 
+  [2XIntermediateCoversBySage[102X 3.1-1 
+  [2XIsElementOfDeckGroup[102X 2.4-1 
   [2XIsHyperellipticBySage[102X 3.1-1 
+  [2XIsNormalOrigami[102X 2.4-1 
   [2XIsPrimitiveBySage[102X 3.1-1 
   [2XLatticeOfAbsolutePeriodsBySage[102X 3.1-1 
-  [2XNormalFormBySage[102X 3.1-1 
+  [2XNormalStoredOrigami[102X 2.5-1 
+  [2XNormalStoredOrigamiNC[102X 2.5-1 
   [2XOptimalDegreeBySage[102X 3.1-1 
   [2XOrigami[102X 2.1-1 
-  [2XOrigamiFamily[102X 2.1-1 
-  [2XOrigamiList[102X 2.4-1 
-  [2XOrigamiListWithStratum[102X 2.4-1 
   [2XOrigamiNC[102X 2.1-1 
-  [2XOrigamiNormalForm[102X 2.1-1 
+  [2XOrigamiNormalForm[102X 2.3-1 
+  [2XOrigamisEquivalent[102X 2.3-1 
   [2XPeriodGeneratorsBySage[102X 3.1-1 
+  [2XQROFromGroup[102X 2.6-1 
+  [2XQROFromOrder[102X 2.6-1 
+  [2XQuasiRegularOrigami[102X 2.6-1 
+  [2XRandomOrigami[102X 2.6-1 
   [2XReduceBySage[102X 3.1-1 
-  [2XRightActionOfF2ViaCanonical[102X 2.2-1 
-  [2XStratum[102X 2.1-1 
+  [2XRemoveOrigamiFromDB[102X, RemoveOrigamiFromDB 4.2-1 
+  [2XRemoveOrigamiOrbitRepresentativeFromDB[102X, RemoveOrigamiOrbitRepresentativeFromDB 4.2-1 
+  [2XRemoveVeechGroupFromDB[102X, RemoveVeechGroupFromDB 4.2-1 
+  [2XStaircaseOrigami[102X 2.6-1 
+  [2XStratum[102X 2.4-1 
   [2XSumOfLyapunovExponentsBySage[102X 3.1-1 
-  [2XVeechGroup[102X 2.3-1 
+  [2XUpdateOrigamiOrbitRepresentativeDBEntry[102X, UpdateOrigamiOrbitRepresentativeDBEntry 4.2-1 
+  [2XUpdateRepresentativeOfOrigami[102X, UpdateRepresentativeOfOrigami 4.2-1 
+  [2XUpdateVeechGroupDBEntry[102X, UpdateVeechGroupDBEntry 4.2-1 
+  [2XVeechGroup[102X 2.4-1 
+  [2XVeechGroupAndOrbit[102X 2.4-1 
   [2XVeechgroupBySage[102X 3.1-1 
+  [2XVerticalElement[102X 2.5-1 
   [2XVerticalPerm[102X 2.1-1 
   [2XWidthsAndHeightsBySage[102X 3.1-1 
+  [2XXOrigami[102X 2.6-1 
   
   
   -------------------------------------------------------

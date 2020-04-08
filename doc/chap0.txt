@@ -3,19 +3,30 @@
                               [1XThe [5XOrigami[105X Package[101X
   
   
-                       [1XComputing Veechgroups of Origamis[101X
+                       [1XComputing Veech groups of origamis[101X
   
   
                                  Version 1.0.0
   
   
-                                   13.11.2018
+                                   09.03.2020
   
+  
+                                   Luca Junk
   
                                  Pascal Kattler
   
                                  Andrea Thevis
   
+  
+  
+  Luca Junk
+      Email:    [7Xmailto:junk@math.uni-sb.de[107X
+      Homepage: [7Xhttp://www.math.uni-sb.de/ag/weitze/[107X
+      Address:  [33X[0;14YAG Weitze-Schmithüsen[133X
+                [33X[0;14YFR 6.1 Mathematik[133X
+                [33X[0;14YUniversität des Saarlandes[133X
+                [33X[0;14YD-66041 Saarbrücken[133X
   
   
   Pascal Kattler
@@ -39,47 +50,55 @@
   
   -------------------------------------------------------
   [1XCopyright[101X
-  [33X[0;0Y© 2018 by Pascal Kattler[133X
+  [33X[0;0Y© 2018-2020 by Luca Junk, Pascal Kattler and Andrea Thevis[133X
   
   
   -------------------------------------------------------
   [1XAcknowledgements[101X
   [33X[0;0YWe  thank  Sergio Siccha for his support and valuable input at the beginning
-  of  this  project.  Further,  we  would  like to thank Vincent Delecroix and
+  of  this  project. Furthermore, we would like to thank Vincent Delecroix and
   Samuel Lelièvre for fruitful discussions about algorithms implemented in the
   surface_dynamics   package  in  sage.  Some  of  the  functionality  of  the
   surface_dynamics  package  can  be used in this package as well. For this we
-  use  an  interface  between [5XGAP[105X and sage. We are thankful to Mohamed Barakat
-  and  Markus  Pfeiffer  for  helping using the interfaces. Moreover, we thank
-  Thomas  Breuer for helpful ideas and comments on some algorithms implemented
-  in this package.[133X
+  use  an  interface  between [5XGAP[105X and sage. We are grateful to Mohamed Barakat
+  and  Markus  Pfeiffer  for  helping teaching us how to use these interfaces.
+  Moreover,  we  thank  Thomas  Breuer  for helpful ideas and comments on some
+  algorithms implemented in this package.[133X
   
   [33X[0;0YThis  software package is part of the project I.8 'Algorithmic approaches to
-  Teichmüller  curves'  (AG  Weitze, Saarland University) supported by SFB-TRR
-  195  'Symbolic  Tools  in  Mathematics  and their Application' of the German
-  Research Foundation (DFG).[133X
+  Teichmüller  curves'  (AG Weitze-Schmithüsen, Saarland University) supported
+  by  SFB-TRR 195 'Symbolic Tools in Mathematics and their Application' of the
+  German Research Foundation (DFG).[133X
   
   
   -------------------------------------------------------
   
   
-  [1XContents (Origami Package)[101X
+  [1XContents (Origami)[101X
   
   1 [33X[0;0YIntroduction[133X
     1.1 [33X[0;0YOverview[133X
     1.2 [33X[0;0YNotations[133X
   2 [33X[0;0YThe functionality of this package[133X
-    2.1 [33X[0;0YThe Origami Object[133X
+    2.1 [33X[0;0YBasic contruction of origamis[133X
       2.1-1 Origami
-    2.2 [33X[0;0Y[22XSL_2(Z)[122X-Action on Origamis[133X
-      2.2-1 [33X[0;0YActions[133X
-    2.3 [33X[0;0YVeech groups[133X
-      2.3-1 VeechGroup
-    2.4 [33X[0;0YLists of Origamis[133X
-      2.4-1 OrigamiList
-  3 [33X[0;0YSageMath functions[133X
-    3.1 [33X[0;0YUsing SageMath functions[133X
-      3.1-1 [33X[0;0YSageMath[133X
+    2.2 [33X[0;0YThe [22XSL_2( Z)[122X-action[133X
+      2.2-1 ActionOfS
+    2.3 [33X[0;0YEquivalence of origamis and normal forms[133X
+      2.3-1 OrigamiNormalForm
+    2.4 [33X[0;0YComputing attributes of origamis[133X
+      2.4-1 Stratum
+    2.5 [33X[0;0YNormal Origamis[133X
+      2.5-1 NormalStoredOrigami
+    2.6 [33X[0;0YConstructing examples of origamis[133X
+      2.6-1 AllOrigamisByDegree
+  3 [33X[0;0YSageMath and the surface_dynamics package[133X
+    3.1 [33X[0;0YSageMath functions[133X
+      3.1-1 VeechgroupBySage
+  4 [33X[0;0YThe Origami Database[133X
+    4.1 [33X[0;0YSetting up the database[133X
+    4.2 [33X[0;0YUsing the origami database[133X
+      4.2-1 ConnectToOrigamiDB
   
   
   [32X

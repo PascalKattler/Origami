@@ -1,16 +1,20 @@
 name: Origami
 version: 1.0.0
-date: 2019-03-13
+date: 2020-04-08
 description: |
-    Computing Veechgroups of origamis
+    Computing Veech groups of origamis
 
 authors:
+    - name: Luca Junk
+      url: http://www.math.uni-sb.de/ag/weitze/
     - name: Pascal Kattler
       url: http://www.math.uni-sb.de/ag/weitze/
     - name: Andrea Thevis
       url: http://www.math.uni-sb.de/ag/weitze/
 
 maintainers:
+    - name: Luca Junk
+      url: http://www.math.uni-sb.de/ag/weitze/
     - name: Pascal Kattler
       url: http://www.math.uni-sb.de/ag/weitze/
     - name: Andrea Thevis
@@ -20,8 +24,8 @@ GAP: "4.5.3"
 
 needed-pkgs:
     - name: "ModularGroup"
-      version: "0.0.1"
-      url: "https://gap-packages.github.io/modulargroup"
+      version: "1.0.0"
+      url: "https://le-on.github.io/ModularGroup"
     - name: "Orb"
       version: "4.7.6"
       url: "https://gap-packages.github.io/orb"
@@ -39,6 +43,9 @@ suggested-pkgs:
     - name: "RingsForHomalg"
       version: "2018.04.04"
       url: "http://homalg-project.github.io/homalg_project/RingsForHomalg/"
+    - name: "ArangoDBInterface"
+      version: "2019.07.30"
+      url: "https://github.com/homalg-project/ArangoDBInterface/"
 
 www: https://PascalKattler.github.io/Origami/
 readme: README.md
@@ -52,17 +59,17 @@ downloads:
       url: https://github.com/PascalKattler/Origami/releases/download/v1.0.0/Origami-1.0.0.zip
 
 abstract: |
-    <span class="pkgname">Origami</span> Origami is a package for computing the Veech group of square-tiled surfaces which are also known as origamis.
+    <span class="pkgname">Origami</span> is a package for computing the Veech group of square-tiled surfaces which are also known as origamis.
 
 status: dev
-doc-html: doc/chap0.html
-doc-pdf: doc/manual.pdf
+doc-html: gapdoc/chap0.html
+doc-pdf: gapdoc/Origami.pdf
 citeas: |
     <p class='BibEntry'>
-    [<span class='BibKey'>KT19</span>]   <b class='BibAuthor'>Kattler, P. and Thevis, A.</b>,
-     <i class='BibTitle'>Origami, Computing Veechgroups of origamis,
+    [<span class='BibKey'>JKT20</span>]   <b class='BibAuthor'>Junk, L., Kattler, P. and Thevis, A.</b>,
+     <i class='BibTitle'>Origami, Computing Veech groups of origamis,
              Version 1.0.0</i>
-     (<span class='BibYear'>2019</span>)<br />
+     (<span class='BibYear'>2020</span>)<br />
     (<span class='BibNote'>GAP package</span>),
     <span class='BibHowpublished'><a href="https://PascalKattler.github.io/Origami/">https://PascalKattler.github.io/Origami/</a></span>.
     </p>
@@ -70,15 +77,15 @@ citeas: |
 
 bibtex: |
     @misc{ Origami1.0.0,
-      author =           {Kattler, P. and Thevis, A.},
-      title =            {{Origami},    Computing   Veechgroups   of   origamis,
+      author =           {Junk, L. and Kattler, P. and Thevis, A.},
+      title =            {{Origami},   Computing   Veech   groups  of  origamis,
                           {V}ersion 1.0.0},
-      month =            {Mar},
-      year =             {2019},
+      month =            {Apr},
+      year =             {2020},
       note =             {GAP package},
       howpublished =     {\href       {https://PascalKattler.github.io/Origami/}
                           {\texttt{https://PascalKattler.github.io/}\discretionary
                           {}{}{}\texttt{Origami/}}},
-      printedkey =       {KT19}
+      printedkey =       {JKT20}
     }
 
