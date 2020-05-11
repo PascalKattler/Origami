@@ -12,7 +12,7 @@
   [2XAllNormalOrigamisFromGroup[102X 2.5-1 
   [2XAllOrigamisByDegree[102X 2.6-1 
   [2XAllOrigamisInStratum[102X 2.6-1 
-  [2XAsPermutationRepresentation[102X 2.5-1 
+  [2XAsPermutationRepresentation[102X 2.5-1  2.5-1 
   [2XConnectToOrigamiDB[102X, ConnectToOrigamiDB 4.2-1 
   [2XCopyOrigamiInNormalForm[102X 2.3-1 
   [2XDeckGroup[102X 2.4-1 
@@ -57,6 +57,7 @@
   [2XRemoveVeechGroupFromDB[102X, RemoveVeechGroupFromDB 4.2-1 
   [2XStaircaseOrigami[102X 2.6-1 
   [2XStratum[102X 2.4-1 
+  [2XSumOfLyapunovExponents[102X 2.4-1 
   [2XSumOfLyapunovExponentsBySage[102X 3.1-1 
   [2XUpdateOrigamiOrbitRepresentativeDBEntry[102X, UpdateOrigamiOrbitRepresentativeDBEntry 4.2-1 
   [2XUpdateRepresentativeOfOrigami[102X, UpdateRepresentativeOfOrigami 4.2-1 

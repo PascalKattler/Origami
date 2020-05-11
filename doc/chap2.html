@@ -403,6 +403,21 @@
     
     </pre></div>
 
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SumOfLyapunovExponents</code>( <var class="Arg">O</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Returns: A positiv Integer.</p>
+
+<p>This function calculates the sum of the positive Lyapunov exponents of the Origami <var class="Arg">O</var>.</p>
+
+
+<div class="example"><pre>
+      
+      gap&gt; O:=Origami((1,2,3,4,5,6,7,8,9),(1,3)(2,4,8)(5,7));
+      Origami((1,2,3,4,5,6,7,8,9), (1,3)(2,4,8)(5,7), 9)
+      gap&gt; SumOfLyapunovExponents(O);
+      32/15
+      
+    </pre></div>
+
 <p><a id="X838AD31B7BF71CDF" name="X838AD31B7BF71CDF"></a></p>
 
 <h4>2.5 <span class="Heading">Normal Origamis</span></h4>
@@ -465,6 +480,11 @@
     Origami((1,2,5)(3,6,9)(4,7,10)(8,11,12), (1,3)(2,7)(4,8)(5,12)(6,11)(9,10), 12)
     
     </pre></div>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AsPermutationRepresentation</code>( <var class="Arg">O</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: An origami.</p>
+
+<p>Converts a normal <code class="code">Origami</code> into a <code class="code">NormalStoredOrigami</code>.</p>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AllNormalOrigamisFromGroup</code>( <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>Returns: A list of normal origamis.</p>
@@ -550,16 +570,50 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XOrigami</code>( <var class="Arg">d</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>Returns: An origami.</p>
 
-<p>Not yet implemented.</p>
+<p>This function calculates an origami of degree <span class="SimpleMath">2d</span>. The permutations are given by <span class="SimpleMath">/sigma_h = (1,...,2k)</span> and <span class="SimpleMath">/sigma_v=(1,2)(3,4)...(2k, 2k-1)</span>.</p>
+
+
+<div class="example"><pre>
+      gap&gt; XOrigami(2);
+      Origami((1,2,3,4), (1,2)(3,4), 4)
+    </pre></div>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ElevatorOrigami</code>( <var class="Arg">l</var>, <var class="Arg">h</var>, <var class="Arg">s</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>Returns: An origami.</p>
 
+<p>The function calculates an Origami similar to the staircase origami, but the first tile of the first step and the last tile of the last tile are connected. The permutations are given by <span class="SimpleMath">/sigma_h= (1,..., a)/circ(a + b + 1,...,2a + b)/circ(2a + 2b + 1,...,3a + 2b)/circ... /circ((d - 1)(a + b) + 1,...,da + (d - 1)b)</span> and <span class="SimpleMath">/sigma_v = (a, a + 1,...,a + b + 1)/circ(2a + b, 2a + b + 1,...,2a + 2b + 1)/circ... /circ (da + (d - 1)b, da + (d - 1)b + 1,..., d(a + b),1)</span></p>
+
+
+<div class="example"><pre>
+      gap&gt;  Elevator(2,0,3);
+      Origami((1,2)(3,5)(4,6), (1,3)(2,4)(5,6), 6)
+    </pre></div>
+
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; StaircaseOrigami</code>( <var class="Arg">l</var>, <var class="Arg">h</var>, <var class="Arg">s</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>Returns: An origami.</p>
 
+<p>This function calculates a "staircase" origami of <var class="Arg">steps</var> steps. Each step has length <var class="Arg">length</var> and height <var class="Arg">height</var>. The permutations are given by <span class="SimpleMath">/sigma_h= (1,..., a)/circ(a + b + 1,...,2a + b)/circ(2a + 2b + 1,...,3a + 2b)/circ... /circ((d - 1)(a + b) + 1,...,da + (d - 1)b)</span> and <span class="SimpleMath">/sigma_v = (a, a + 1,...,a + b + 1)/circ(2a + b, 2a + b + 1,...,2a + 2b + 1)/circ... /circ (da + (d - 1)b, da + (d - 1)b + 1,..., d(a + b))</span></p>
+
+
+<div class="example"><pre>
+      gap&gt; Staircase(2,0,3);
+      Origami((1,2)(3,4)(5,6), (2,3)(4,5), 6)
+    </pre></div>
+
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; QuasiRegularOrigami</code>( <var class="Arg">G</var>, <var class="Arg">H</var>, <var class="Arg">r</var>, <var class="Arg">u</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>Returns: An origami.</p>
+
+<p>The function calculates an origami by a given group <var class="Arg">G</var> and a subgroup of <var class="Arg">G</var> <var class="Arg">H</var>. <var class="Arg">H</var> must not contain any normal subgroups of G and <var class="Arg">r</var> and <var class="Arg">u</var> are the generators of G. We identify the tiles of the origami with the right cosets of H in G. The right neighbour of the tile <span class="SimpleMath">Hg</span> is the tile <span class="SimpleMath">Hgr</span> and the upper neighbour of <span class="SimpleMath">Hg</span> is <span class="SimpleMath">Hgu</span>.</p>
+
+
+<div class="example"><pre>
+      G:=SymmetricGroup(3);
+      Sym( [ 1 .. 3 ] )
+      gap&gt; H:=Group(());
+      Group(())
+      gap&gt;QuasiRegularOrigami(G,H,(1,2),(2,3));
+      Origami((1,2)(3,5)(4,6), (1,3)(2,4)(5,6), 6)
+    </pre></div>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; QROFromGroup</code>( <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>Returns: A list of origamis.</p>

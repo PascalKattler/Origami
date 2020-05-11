@@ -1,6 +1,6 @@
 name: Origami
 version: 1.0.0
-date: 2020-04-08
+date: 2020-05-11
 description: |
     Computing Veech groups of origamis
 
@@ -62,8 +62,8 @@ abstract: |
     <span class="pkgname">Origami</span> is a package for computing the Veech group of square-tiled surfaces which are also known as origamis.
 
 status: dev
-doc-html: gapdoc/chap0.html
-doc-pdf: gapdoc/Origami.pdf
+doc-html: doc/chap0.html
+doc-pdf: doc/Origami.pdf
 citeas: |
     <p class='BibEntry'>
     [<span class='BibKey'>JKT20</span>]   <b class='BibAuthor'>Junk, L., Kattler, P. and Thevis, A.</b>,
@@ -80,7 +80,7 @@ bibtex: |
       author =           {Junk, L. and Kattler, P. and Thevis, A.},
       title =            {{Origami},   Computing   Veech   groups  of  origamis,
                           {V}ersion 1.0.0},
-      month =            {Apr},
+      month =            {May},
       year =             {2020},
       note =             {GAP package},
       howpublished =     {\href       {https://PascalKattler.github.io/Origami/}

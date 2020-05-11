@@ -2,22 +2,22 @@ SetPackageInfo( rec(
 	PackageName := "Origami",
 	Subtitle := "Computing Veech groups of origamis",
 	Version := "1.0.0",
-	Date := "08/04/2020",
+	Date := "11/05/2020",
 	AvailabilityTest := ReturnTrue,
 	Status := "dev",
 
 	PackageDoc := rec(
 		BookName  := ~.PackageName,
 		ArchiveURLSubset := ["doc"],
-		HTMLStart := "gapdoc/chap0.html",
-		PDFFile   := "gapdoc/Origami.pdf",
-		SixFile   := "gapdoc/manual.six",
+		HTMLStart := "doc/chap0.html",
+		PDFFile   := "doc/Origami.pdf",
+		SixFile   := "doc/manual.six",
 		LongTitle := ~.Subtitle,
 ),
 
 ##  <#GAPDoc Label="PKGVERSIONDATA">
 ##  <!ENTITY VERSION "1.0.0">
-##  <!ENTITY RELEASEDATE "08 April 2020">
+##  <!ENTITY RELEASEDATE "11 May 2020">
 ##  <!ENTITY RELEASEYEAR "2020">
 ##  <#/GAPDoc>
 

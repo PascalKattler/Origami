@@ -363,6 +363,22 @@
     [4X[28X    [128X[104X
   [4X[32X[104X
   
+  [33X[1;0Y[29X[2XSumOfLyapunovExponents[102X( [3XO[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YA positiv Integer.[133X
+  
+  [33X[0;0YThis  function  calculates the sum of the positive Lyapunov exponents of the
+  Origami [3XO[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X      [128X[104X
+    [4X[28X      gap> O:=Origami((1,2,3,4,5,6,7,8,9),(1,3)(2,4,8)(5,7));[128X[104X
+    [4X[28X      Origami((1,2,3,4,5,6,7,8,9), (1,3)(2,4,8)(5,7), 9)[128X[104X
+    [4X[28X      gap> SumOfLyapunovExponents(O);[128X[104X
+    [4X[28X      32/15[128X[104X
+    [4X[28X      [128X[104X
+    [4X[28X    [128X[104X
+  [4X[32X[104X
+  
   
   [1X2.5 [33X[0;0YNormal Origamis[133X[101X
   
@@ -442,6 +458,11 @@
     [4X[28X    [128X[104X
     [4X[28X    [128X[104X
   [4X[32X[104X
+  
+  [33X[1;0Y[29X[2XAsPermutationRepresentation[102X( [3XO[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YAn origami.[133X
+  
+  [33X[0;0YConverts a normal [10XOrigami[110X into a [10XNormalStoredOrigami[110X.[133X
   
   [33X[1;0Y[29X[2XAllNormalOrigamisFromGroup[102X( [3XG[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10YA list of normal origamis.[133X
@@ -526,16 +547,66 @@
   [33X[1;0Y[29X[2XXOrigami[102X( [3Xd[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10YAn origami.[133X
   
-  [33X[0;0YNot yet implemented.[133X
+  [33X[0;0YThis function calculates an origami of degree [22X2d[122X. The permutations are given
+  by [22X/sigma_h = (1,...,2k)[122X and [22X/sigma_v=(1,2)(3,4)...(2k, 2k-1)[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X      gap> XOrigami(2);[128X[104X
+    [4X[28X      Origami((1,2,3,4), (1,2)(3,4), 4)[128X[104X
+    [4X[28X    [128X[104X
+  [4X[32X[104X
   
   [33X[1;0Y[29X[2XElevatorOrigami[102X( [3Xl[103X, [3Xh[103X, [3Xs[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10YAn origami.[133X
   
+  [33X[0;0YThe function calculates an Origami similar to the staircase origami, but the
+  first  tile  of  the  first  step  and  the  last  tile of the last tile are
+  connected.  The  permutations are given by [22X/sigma_h= (1,..., a)/circ(a + b +
+  1,...,2a  +  b)/circ(2a + 2b + 1,...,3a + 2b)/circ... /circ((d - 1)(a + b) +
+  1,...,da + (d - 1)b)[122X and [22X/sigma_v = (a, a + 1,...,a + b + 1)/circ(2a + b, 2a
+  +  b  +  1,...,2a  +  2b  + 1)/circ... /circ (da + (d - 1)b, da + (d - 1)b +
+  1,..., d(a + b),1)[122X[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X      gap>  Elevator(2,0,3);[128X[104X
+    [4X[28X      Origami((1,2)(3,5)(4,6), (1,3)(2,4)(5,6), 6)[128X[104X
+    [4X[28X    [128X[104X
+  [4X[32X[104X
+  
   [33X[1;0Y[29X[2XStaircaseOrigami[102X( [3Xl[103X, [3Xh[103X, [3Xs[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10YAn origami.[133X
   
+  [33X[0;0YThis function calculates a "staircase" origami of [3Xsteps[103X steps. Each step has
+  length  [3Xlength[103X  and  height  [3Xheight[103X. The permutations are given by [22X/sigma_h=
+  (1,...,  a)/circ(a + b + 1,...,2a + b)/circ(2a + 2b + 1,...,3a + 2b)/circ...
+  /circ((d - 1)(a + b) + 1,...,da + (d - 1)b)[122X and [22X/sigma_v = (a, a + 1,...,a +
+  b  +  1)/circ(2a  +  b, 2a + b + 1,...,2a + 2b + 1)/circ... /circ (da + (d -
+  1)b, da + (d - 1)b + 1,..., d(a + b))[122X[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X      gap> Staircase(2,0,3);[128X[104X
+    [4X[28X      Origami((1,2)(3,4)(5,6), (2,3)(4,5), 6)[128X[104X
+    [4X[28X    [128X[104X
+  [4X[32X[104X
+  
   [33X[1;0Y[29X[2XQuasiRegularOrigami[102X( [3XG[103X, [3XH[103X, [3Xr[103X, [3Xu[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10YAn origami.[133X
+  
+  [33X[0;0YThe function calculates an origami by a given group [3XG[103X and a subgroup of [3XG[103X [3XH[103X.
+  [3XH[103X  must not contain any normal subgroups of G and [3Xr[103X and [3Xu[103X are the generators
+  of  G. We identify the tiles of the origami with the right cosets of H in G.
+  The  right  neighbour of the tile [22XHg[122X is the tile [22XHgr[122X and the upper neighbour
+  of [22XHg[122X is [22XHgu[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X      G:=SymmetricGroup(3);[128X[104X
+    [4X[28X      Sym( [ 1 .. 3 ] )[128X[104X
+    [4X[28X      gap> H:=Group(());[128X[104X
+    [4X[28X      Group(())[128X[104X
+    [4X[28X      gap>QuasiRegularOrigami(G,H,(1,2),(2,3));[128X[104X
+    [4X[28X      Origami((1,2)(3,5)(4,6), (1,3)(2,4)(5,6), 6)[128X[104X
+    [4X[28X    [128X[104X
+  [4X[32X[104X
   
   [33X[1;0Y[29X[2XQROFromGroup[102X( [3XG[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10YA list of origamis.[133X
